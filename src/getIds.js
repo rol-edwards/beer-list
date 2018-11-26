@@ -1,5 +1,4 @@
 const getIds = function(x){
-	console.log('x is: ' + x)
 		var start = x + 1
 		var nums = []
 		for (var i = start; i < start + 10; i ++){
@@ -10,7 +9,6 @@ const getIds = function(x){
 			idString = idString + num + '|';
 		})
 		idString = idString.slice(0, -1);
-		console.log('idString: ' + idString)
 		return idString;
 	}
 
