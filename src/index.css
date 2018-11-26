@@ -1,5 +1,93 @@
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   font-family: sans-serif;
+}
+
+h1 {
+  padding-top: 50px;
+  color: orange;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid orange; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    z-index: 1;
+    background-color: white;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.button {
+    display: none;
+    position: relative;
+}
+
+.button:active {
+  background-color: red;
+}
+
+tr:hover .button, .button:hover {
+    display: inline-block;
+}
+
+.list tr:hover {
+  font-size: 15pt;
+}
+
+button {
+  border-radius: 0;
+  background-color: orange;
+  height: 25px;
+  width: 100px;
+  font-size: 10pt;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+header {
+  top: 0;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  padding-top: 15px;
+  border-bottom: 1px solid grey;
+}
+
+.padded {
+  padding-right: 10px;
+}
+
+.load {
+  margin-top: 10px;
+}
+
+.cart td, th{
+  width: 25%;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  text-align: left;
 }
