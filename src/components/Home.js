@@ -11,11 +11,11 @@ class Home extends React.Component {
 	}
 
 	scrollToMyRef(){
-    window.scrollTo({
-        top:this.myRef.current.offsetTop, 
-        behavior: "smooth"
-		    })
-		}
+	    window.scrollTo({
+	        top:this.myRef.current.offsetTop, 
+	        behavior: "smooth"
+	    })
+	}
 
 	componentDidMount(){
 		if (this.props.beers.length == 0){
@@ -26,15 +26,14 @@ class Home extends React.Component {
 	componentDidUpdate(){
 		this.scrollToMyRef()
 	}
+
 	render(){
 
-		
 		if (this.props.isLoading){
-			var loader = (
-				<div className='loader'></div>)
+			var loader = (<div className='loader'></div>)
 		}
 		else {
-		var loader = (<div></div>);
+			var loader = (<div></div>);
 
 		}
 		return(
